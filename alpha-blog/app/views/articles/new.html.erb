@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Article</title>
+</head>
+<body>
+    <h1>New Article</h1>
+    <%= form_for @article do |f| %>
+    <p>
+        <%= f.label :title, "Enter Title" %>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :description, "Enter Description" %>
+        <%= f.text_area :description %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+    <% end %>
+</body>
+</html>
