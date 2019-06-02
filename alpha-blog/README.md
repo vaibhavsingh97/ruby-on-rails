@@ -1,24 +1,54 @@
-# README
+# Aplha Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Command used
 
-* Ruby version
+1. To genrate new rails apps
 
-* System dependencies
+```sh
+$ rails new test-app
+```
 
-* Configuration
+2. To create a db migration
 
-* Database creation
+```sh
+$ rails generate migration create_articles
+```
+will get output
+```sh
+Running via Spring preloader in process 62852
+      invoke  active_record
+      create    db/migrate/20190602143947_create_articles.rb
+```
 
-* Database initialization
+3. Migrate database to reflect changes
 
-* How to run the test suite
+```sh
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+to rollback one camn use
+```sh
+$ rails db:rollback
+```
 
-* Deployment instructions
+to update migration file run this
 
-* ...
+```sh
+$ rails generate migration add_description_to_articles
+```
+
+this will genrate empty migration, and post that you can add change
+
+```
+Model name: Article, class: Article -> Capitalized A and singular
+
+File name: article.rb -> singular and all lowercase
+
+Controller file name: articles_controller.rb, class: ArticlesController -> camel case class name, snake case file name both plural
+
+Views folder: articles
+
+Table name: articles -> plural of model
+
+```
