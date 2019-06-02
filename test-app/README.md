@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Command used
 
-Things you may want to cover:
+1. To genrate new rails apps
 
-* Ruby version
+```sh
+rails new test-app
+```
 
-* System dependencies
+2. The generator checks that there exist the directories for models, controllers, helpers, layouts, functional and unit tests, stylesheets, creates the views, controller, model and database migration for `Article` (creating the high_scores table and fields), takes care of the route for the resource, and new tests for everything.
 
-* Configuration
+```sh
+    rails generate scaffold Article title:string description:text
+```
 
-* Database creation
+3. Migrate database to reflect changes
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+    rails db:migrate
+```
