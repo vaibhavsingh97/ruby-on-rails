@@ -1,5 +1,6 @@
 # Aplha Blog
 
+Demo link: [Alpha Blog](https://alpha-blog-vaibhav.herokuapp.com/)
 
 Command used
 
