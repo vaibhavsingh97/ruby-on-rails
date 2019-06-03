@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Show Article</title>
-</head>
-<body>
-    <h1>Showing selected article</h1>
-    <p>
-        <strong>Article:</strong>
-        <%= @article.title %>
-    </p>
+<h1>Showing selected article</h1>
+<p>
+    <strong>Article:</strong>
+    <%= @article.title %>
+</p>
 
-    <p>
-        <strong>Description:</strong>
-        <%= @article.description %>
-    </p>
-</body>
-</html>
+<p>
+    <strong>Description:</strong>
+    <%= @article.description %>
+</p>
+
+<p>
+    <%= link_to  "Back", articles_path %> |
+    <%= link_to  "Edit", edit_article_path(@article) %>
+</p>
